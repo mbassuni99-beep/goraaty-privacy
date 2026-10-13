@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية وحماية البيانات - تطبيق جرعتي (Goraaty)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F2747;
+            --primary-light: #1A365D;
+            --accent: #0EA5E9;
+            --accent-green: #10B981;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow: 0 4px 20px -2px rgba(15, 39, 71, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 30px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .header-card {
+            background: linear-gradient(135deg, var(--primary) 0%, #081426 100%);
+            color: #ffffff;
+            padding: 36px 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(15, 39, 71, 0.2);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-card::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #38BDF8;
+        }
+
+        .header-card h1 {
+            font-size: 1.95rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .header-meta {
+            font-size: 0.95rem;
+            color: #94A3B8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header-meta strong {
+            color: #F1F5F9;
+        }
+
+        .policy-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 28px 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #F1F5F9;
+            padding-bottom: 8px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-right: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: rgba(14, 165, 233, 0.06);
+            border: 1.5px solid rgba(14, 165, 233, 0.25);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            margin: 18px 0;
+        }
+
+        .highlight-box.green {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .highlight-box.warning {
+            background: rgba(245, 158, 11, 0.06);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .highlight-box h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .contact-card {
+            background: #F1F5F9;
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94A3B8;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 16px 10px; }
+            .header-card, .policy-card { padding: 24px 18px; }
+            .header-card h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-card">
+            <div class="app-badge">
+                <span>🛡️ سياسة الخصوصية</span>
+            </div>
+            <h1>سياسة الخصوصية وحماية البيانات (Privacy Policy)</h1>
+            <div class="header-meta">
+                <span><strong>التطبيق:</strong> جرعتي | Goraaty (DoseKids)</span>
+                <span><strong>معرّف الحزمة:</strong> com.goraaty.dosekids</span>
+                <span><strong>تاريخ السريان:</strong> 13 أكتوبر 2026 (الإصدار 3.3.0)</span>
+            </div>
+        </header>
+
+        <main class="policy-card">
+            <div class="section-title">1. مقدمة والتزام أخلاقي وقانوني</div>
+            <p>
+                نحن في تطبيق «جرعتي | Goraaty» نلتزم التزاماً مطلقاً بحماية خصوصية مستخدمينا، وخاصة بيانات الأطفال وأولياء الأمور والكوادر الطبية. هذه الوثيقة توضح السياسة الشاملة للتعامل مع البيانات بما يتوافق تماماً مع متطلبات متجر تطبيقات جوجل وسياسات تطبيقات الصحة (Google Play Health Apps Policy & Data Safety Requirements).
+            </p>
+
+            <div class="highlight-box green">
+                <h3>🔒 مبدأ المعمارية المحلية أولاً (Local-First Zero-Collection)</h3>
+                <p style="margin-bottom:0;">
+                    تطبيق «جرعتي» يعمل كأداة حسابية سريرية استرشادية، ويعتمد بشكل كامل على المعالجة والتخزين المحلي على جهاز المستخدم. لا يقوم التطبيق بإنشاء حسابات مستخدمين، ولا يطلب تسجيل دخول، ولا يجمع أو يرفع أو ينقل أي بيانات شخصية أو صحية لأي خوادم خارجية أو سحابية.
+                </p>
+            </div>
+
+            <div class="section-title">2. البيانات التي يتم إدخالها ومعالجتها داخل الجهاز</div>
+            <p>البيانات التي يدخلها المستخدم تُحفظ محلياً فقط داخل مساحة تخزين التطبيق على جهازه (Local Storage) وتشمل:</p>
+            <ul>
+                <li><strong>بيانات الطفل الأساسية (اختيارية):</strong> الاسم أو اللقب، الوزن بالكيلوجرام، والعمر بالشهور/السنوات، والجنس لمطابقة منحنيات نمو منظمة الصحة العالمية (WHO Growth Charts).</li>
+                <li><strong>ملفات الأطفال المتعددة (Multi-Child Profiles):</strong> ميزة محلية تتيح حفظ بيانات أطفال متعددين لتسريع الحسابات اللاحقة وتطبيق فلاتر الأمان الدوائي.</li>
+                <li><strong>حالة أنيميا الفول (G6PD Deficiency Status):</strong> مؤشر محلي اختياري يحدد ما إذا كان الطفل مصاباً بحساسية البقوليات، لتفعيل فلتر الحظر التلقائي للأدوية المحفزة لتكسير كرات الدم الحمراء.</li>
+                <li><strong>سجل الجرعات والعمليات (Dose & History Log):</strong> سجل محلي يحفظ أسماء الأدوية المحسوبة، التوقيت، والجرعة المعطاة لمساعدة ولي الأمر في معرفة موعد الجرعة التالية ومنع تكرار الجرعات.</li>
+            </ul>
+
+            <div class="section-title">3. انعدام مشاركة البيانات أو التتبع الخارجي (Zero Data Sharing)</div>
+            <ul>
+                <li><strong>عدم نقل البيانات:</strong> لا تتصل قاعدة بيانات التطبيق بأي سيرفر خارجي لحفظ أو مزامنة أي بيانات خاصة بالمريض.</li>
+                <li><strong>خلو التطبيق من الإعلانات:</strong> التطبيق خالٍ تماماً من أي شبكات إعلانية تجارية أو معرّف إعلانات جوجل (No AD_ID).</li>
+                <li><strong>خلو التطبيق من أدوات التتبع التحليلي:</strong> لا نستخدم أي حزم برمجية لتحليل السلوك (مثل Google Analytics أو Firebase Analytics أو Facebook SDK).</li>
+                <li><strong>الخطوط والأصول البرمجية:</strong> خطوط التطبيق وأيقوناته مستضافة ذاتياً ومضمنة بنسبة 100% داخل الحزمة لضمان عدم تسريب أي عنوان بروتوكول إنترنت (IP Address) لمزودي الخدمات الخارجية.</li>
+            </ul>
+
+            <div class="section-title">4. الميزات الإضافية والصلاحيات الاختيارية</div>
+            <ul>
+                <li><strong>البحث الصوتي عن الأدوية:</strong> ميزة اختيارية تستخدم محرك التعرف الصوتي المدمج بنظام التشغيل/المتصفح (Web Speech API) لتحويل اسم الدواء المنطوق إلى نص بحث فوري، دون تسجيل أو تخزين أي ملف صوتي.</li>
+                <li><strong>مشاركة تذكرة الجرعة عبر واتساب:</strong> تتم فقط بناءً على رغبة المستخدم وإجراء إرادي منه بالضغط على زر المشاركة، حيث يتم تمرير ملخص الجرعة لتطبيق واتساب المثبت على جهازك دون تدخل من التطبيق.</li>
+            </ul>
+
+            <div class="section-title">5. التحكم الكامل في البيانات وآلية الحذف (User Data Control & Deletion)</div>
+            <p>يمتلك المستخدم السيادة والتحكم المطلق في كافة البيانات المخزنة على جهازه:</p>
+            <ul>
+                <li>يمكن تعديل أو حذف أي ملف لطفل في أي وقت من شاشة إدارة الملفات.</li>
+                <li>يمكن مسح أي عملية من سجل الجرعات بنقرة واحدة.</li>
+                <li>يوفر التطبيق زراً صريحاً: <strong>«مسح كل بياناتي من هذا الجهاز»</strong> في صفحة السجل لحذف كافة الملفات والإعدادات المخزنة محلياً فوراً ونهائياً.</li>
+            </ul>
+
+            <div class="section-title">6. إخلاء المسؤولية الطبي الصارم (Google Play Medical Disclaimer)</div>
+            <div class="highlight-box warning">
+                <h3>⚠️ تنبيه طبي وتنظيمي حاسم</h3>
+                <p>
+                    <strong>تطبيق «جرعتي | Goraaty» أداة حسابية استرشادية ومرجع تثقيفي، وليس جهازاً طبياً (Not a Medical Device):</strong><br>
+                    لا يقدم التطبيق تشخيصاً طبياً، أو وصفة علاجية نهائية، أو خطة علاجية فردية. جميع الجرعات والمعادلات الحسابية مستندة إلى أدلة ومراجع صيدلانية معتمدة (مثل نشرات DailyMed وemc وHPRA، وBNFc وWHO)، ولكنها تهدف لمساعدة الكادر الطبي المؤهل وتقليل أخطاء القياس الشائعة لدى أولياء الأمور. لا يغني التطبيق بأي حال عن الفحص السريري المباشر أو استشارة الطبيب المعالج أو الصيدلي السريري المرخص. يجب دائماً استشارة الطبيب قبل اتخاذ أي قرار علاجي يتعلق بصحة الطفل.
+                </p>
+            </div>
+
+            <div class="section-title">7. بيانات التواصل والمسؤول السريري</div>
+            <p>لأي استفسارات طبية أو استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع المشرف السريري:</p>
+            <div class="contact-card">
+                <div><strong>د. محمود محمد البسيوني</strong> — صيدلي إكلينيكي ومطور النظم السريرية</div>
+                <div>البريد الإلكتروني: <a href="mailto:mahmoud@elbassiouni.online">mahmoud@elbassiouni.online</a></div>
+                <div>الموقع: <a href="https://elbassiouni.online" target="_blank">https://elbassiouni.online</a></div>
+                <div>هاتف / واتساب: <a href="https://wa.me/966545071561" target="_blank">0545071561</a></div>
+            </div>
+        </main>
+
+        <footer class="footer-note">
+            جميع الحقوق محفوظة © 2026 تطبيق جرعتي (Goraaty) — مرجع الجرعات السريرية للأطفال
+        </footer>
+    </div>
+</body>
+</html>
